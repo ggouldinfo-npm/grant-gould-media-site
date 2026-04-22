@@ -30,13 +30,13 @@ export default function Navbar() {
           className="flex items-center gap-3 font-display text-[1.05rem] font-semibold tracking-[-0.02em] text-charcoal-900 transition hover:text-burgundy-700 sm:text-[1.12rem]"
         >
           <Image
-            src="/branding/logo-mark.png"
-            alt="Grant Gould Media logo"
-            width={28}
-            height={28}
-            className="h-7 w-7 object-contain"
-            priority
-          />
+  src="/branding/logo-mark.png"
+  alt="Grant Gould Media logo"
+  width={40}
+  height={40}
+  className="h-10 w-10 object-contain"
+  priority
+/>
           <span>Grant Gould Media</span>
         </Link>
 

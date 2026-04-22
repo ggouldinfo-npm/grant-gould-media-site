@@ -52,7 +52,7 @@ export default function GranvilleStoriesPage() {
             </Link>
 
             <a
-              href="YOUR_GOFUNDME_LINK"
+              href="https://gofund.me/8662c07fa"
               className="rounded-full border border-cream-25/30 px-6 py-3 text-sm font-medium text-cream-25 transition duration-200 hover:-translate-y-0.5 hover:border-burgundy-700 hover:text-burgundy-700"
             >
               Support the Project

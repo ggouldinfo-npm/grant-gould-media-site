@@ -4,6 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { Orbitron } from "next/font/google";
+
+const orbitron = Orbitron({
+  subsets: ["latin"],
+  weight: ["500", "600"],
+});
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -27,17 +33,21 @@ export default function Navbar() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link
           href="/"
-          className="flex items-center gap-3 font-display text-[1.05rem] font-semibold tracking-[-0.02em] text-charcoal-900 transition hover:text-burgundy-700 sm:text-[1.12rem]"
+          className="flex items-center gap-3 text-charcoal-900 transition hover:text-burgundy-700"
         >
           <Image
-  src="/branding/logo-mark.png"
-  alt="Grant Gould Media logo"
-  width={40}
-  height={40}
-  className="h-10 w-10 object-contain"
-  priority
-/>
-          <span>Grant Gould Media</span>
+            src="/branding/logo-mark.png"
+            alt="Grant Gould Media logo"
+            width={44}
+            height={44}
+            className="h-11 w-11 object-contain"
+            priority
+          />
+          <span
+            className={`${orbitron.className} text-[0.98rem] font-medium uppercase tracking-[0.08em] sm:text-[1.02rem]`}
+          >
+            Grant Gould Media
+          </span>
         </Link>
 
         <div className="relative">

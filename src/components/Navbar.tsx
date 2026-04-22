@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -22,13 +23,21 @@ export default function Navbar() {
   }, [pathname]);
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-cream-100 bg-cream-25">
+    <nav className="sticky top-0 z-50 border-b border-cream-100 bg-cream-25/92 backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link
           href="/"
-          className="font-display text-[1.05rem] font-semibold tracking-[-0.02em] text-charcoal-900 transition hover:text-burgundy-700 sm:text-[1.12rem]"
+          className="flex items-center gap-3 font-display text-[1.05rem] font-semibold tracking-[-0.02em] text-charcoal-900 transition hover:text-burgundy-700 sm:text-[1.12rem]"
         >
-          Grant Gould Media
+          <Image
+            src="/branding/logo-mark.png"
+            alt="Grant Gould Media logo"
+            width={28}
+            height={28}
+            className="h-7 w-7 object-contain"
+            priority
+          />
+          <span>Grant Gould Media</span>
         </Link>
 
         <div className="relative">

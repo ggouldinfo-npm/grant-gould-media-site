@@ -54,24 +54,15 @@ export const metadata: Metadata = {
       "Story-driven media for communities, businesses, and real stories near Granville, New York and nearby Vermont.",
     url: "https://www.grantgouldmedia.com",
     siteName: "Grant Gould Media",
-    images: [
-      {
-        url: "/branding/og-image.png",
-        width: 512,
-        height: 512,
-        alt: "Grant Gould Media logo",
-      },
-    ],
     locale: "en_US",
     type: "website",
   },
 
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "Grant Gould Media",
     description:
       "Story-driven media for communities, businesses, and real stories near Granville, New York and nearby Vermont.",
-    images: ["/branding/og-image.png"],
   },
 
   icons: {

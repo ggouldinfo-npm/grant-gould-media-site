@@ -83,7 +83,7 @@ export default function Footer() {
             <div className="mt-5 space-y-3 text-sm text-charcoal-700">
               <p>
                 For business inquiries, collaborations, community projects, and
-                story-driven media work.
+                story-driven media work, use the email below.
               </p>
 
               <a

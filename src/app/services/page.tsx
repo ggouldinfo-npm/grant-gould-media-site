@@ -18,7 +18,7 @@ const spaceGrotesk = Space_Grotesk({
 export default function ServicesPage() {
   return (
     <div className={`${manrope.className} bg-charcoal-900 text-white`}>
-      <section className="relative min-h-[78vh] overflow-hidden">
+      <section className="relative min-h-[72vh] overflow-hidden sm:min-h-[78vh]">
         <video
           className="absolute inset-0 h-full w-full object-cover"
           src="/videos/services-drone.mp4"
@@ -37,7 +37,7 @@ export default function ServicesPage() {
           variants={pageStagger}
           initial="hidden"
           animate="show"
-          className="relative z-10 mx-auto flex min-h-[78vh] max-w-6xl items-center px-6 py-24"
+          className="relative z-10 mx-auto flex min-h-[72vh] max-w-6xl items-center px-5 py-20 sm:min-h-[78vh] sm:px-6 sm:py-24"
         >
           <div className="max-w-4xl">
             <motion.p
@@ -49,30 +49,33 @@ export default function ServicesPage() {
 
             <motion.h1
               variants={riseIn}
-              className={`${spaceGrotesk.className} mt-4 max-w-5xl text-5xl font-semibold leading-[1.12] tracking-normal text-white sm:text-7xl`}
+              className={`${spaceGrotesk.className} mt-4 max-w-5xl text-4xl font-semibold leading-[1.08] tracking-normal text-white sm:text-7xl sm:leading-[1.12]`}
             >
               Story-driven media for communities, businesses, and real stories
             </motion.h1>
 
             <motion.p
               variants={riseIn}
-              className="mt-8 max-w-2xl text-lg font-normal leading-8 tracking-normal text-white/85 sm:text-xl"
+              className="mt-6 max-w-2xl text-base font-normal leading-7 tracking-normal text-white/85 sm:mt-8 sm:text-xl sm:leading-8"
             >
               Drone visuals, short-form content, and documentary-style media
               built on purpose, quality, and perspective.
             </motion.p>
 
-            <motion.div variants={riseIn} className="mt-10 flex flex-wrap gap-4">
+            <motion.div
+              variants={riseIn}
+              className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4"
+            >
               <Link
                 href="/contact"
-                className="bg-white px-6 py-3 text-sm font-medium tracking-normal text-charcoal-900 transition duration-200 hover:-translate-y-0.5 hover:bg-burgundy-700 hover:text-white"
+                className="w-full bg-white px-6 py-3 text-center text-sm font-medium tracking-normal text-charcoal-900 transition duration-200 hover:-translate-y-0.5 hover:bg-burgundy-700 hover:text-white sm:w-auto"
               >
                 Contact
               </Link>
 
               <Link
                 href="/granville-stories"
-                className="border border-white/35 px-6 py-3 text-sm font-medium tracking-normal text-white transition duration-200 hover:-translate-y-0.5 hover:border-burgundy-700 hover:text-burgundy-700"
+                className="w-full border border-white/35 px-6 py-3 text-center text-sm font-medium tracking-normal text-white transition duration-200 hover:-translate-y-0.5 hover:border-burgundy-700 hover:text-burgundy-700 sm:w-auto"
               >
                 View Granville Stories
               </Link>
@@ -81,19 +84,19 @@ export default function ServicesPage() {
         </motion.div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 py-24 pb-28">
+      <section className="mx-auto max-w-6xl px-5 py-16 pb-20 sm:px-6 sm:py-24 sm:pb-28">
         <p className="text-xs font-semibold uppercase tracking-[0.28em] text-burgundy-700">
           What I Offer
         </p>
 
         <motion.div
           whileHover={cardLift}
-          className="mt-8 border border-charcoal-800 bg-charcoal-900/40 p-8 shadow-none sm:p-10"
+          className="mt-8 border border-charcoal-800 bg-charcoal-900/40 p-6 shadow-none sm:p-10"
         >
           <h2
-            className={`${spaceGrotesk.className} text-3xl font-semibold leading-tight tracking-normal text-white`}
+            className={`${spaceGrotesk.className} text-3xl font-semibold leading-tight tracking-normal text-white sm:text-4xl`}
           >
-            Services Available
+            Specific Services
           </h2>
 
           <p className="mt-5 max-w-3xl leading-7 tracking-normal text-white/72">
@@ -102,7 +105,7 @@ export default function ServicesPage() {
             digital presence.
           </p>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
+          <div className="mt-10 grid gap-8 md:grid-cols-2">
             <div>
               <h3
                 className={`${spaceGrotesk.className} text-2xl font-semibold tracking-normal text-white`}
@@ -177,19 +180,19 @@ export default function ServicesPage() {
           </div>
         </motion.div>
 
-        <motion.div variants={riseIn} className="mt-24">
+        <motion.div variants={riseIn} className="mt-16 sm:mt-24">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-burgundy-700">
             Where I Work
           </p>
 
           <h2
-            className={`${spaceGrotesk.className} mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-normal text-white`}
+            className={`${spaceGrotesk.className} mt-4 max-w-3xl text-3xl font-semibold leading-tight tracking-normal text-white sm:text-4xl`}
           >
             Based near Granville, focused on nearby New York and Vermont
             communities
           </h2>
 
-          <p className="mt-6 max-w-3xl text-lg leading-8 tracking-normal text-white/72">
+          <p className="mt-6 max-w-3xl text-base leading-7 tracking-normal text-white/72 sm:text-lg sm:leading-8">
             I focus on projects close to home and throughout the surrounding
             region, especially places where local businesses, communities, and
             stories deserve stronger visuals.
@@ -199,7 +202,7 @@ export default function ServicesPage() {
             <motion.div
               variants={riseIn}
               whileHover={cardLift}
-              className="border border-charcoal-800 bg-charcoal-900/40 p-8 shadow-none"
+              className="border border-charcoal-800 bg-charcoal-900/40 p-6 shadow-none sm:p-8"
             >
               <h3
                 className={`${spaceGrotesk.className} text-2xl font-semibold tracking-normal text-white`}
@@ -215,7 +218,7 @@ export default function ServicesPage() {
             <motion.div
               variants={riseIn}
               whileHover={cardLift}
-              className="border border-charcoal-800 bg-charcoal-900/40 p-8 shadow-none"
+              className="border border-charcoal-800 bg-charcoal-900/40 p-6 shadow-none sm:p-8"
             >
               <h3
                 className={`${spaceGrotesk.className} text-2xl font-semibold tracking-normal text-white`}

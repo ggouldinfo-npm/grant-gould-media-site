@@ -119,7 +119,7 @@ export default function ContactPage() {
         variants={pageStagger}
         initial="hidden"
         animate="show"
-        className="mx-auto max-w-5xl px-6 py-24"
+        className="mx-auto max-w-5xl px-5 py-16 sm:px-6 sm:py-24"
       >
         <motion.p
           variants={riseIn}
@@ -130,31 +130,31 @@ export default function ContactPage() {
 
         <motion.h1
           variants={riseIn}
-          className={`${spaceGrotesk.className} mt-4 max-w-3xl text-5xl font-semibold leading-[1.12] tracking-normal text-white sm:text-7xl`}
+          className={`${spaceGrotesk.className} mt-4 max-w-3xl text-4xl font-semibold leading-[1.08] tracking-normal text-white sm:text-7xl sm:leading-[1.12]`}
         >
           Let’s connect
         </motion.h1>
 
         <motion.p
           variants={riseIn}
-          className="mt-8 max-w-2xl text-lg leading-8 tracking-normal text-white/78 sm:text-xl"
+          className="mt-6 max-w-2xl text-base leading-7 tracking-normal text-white/78 sm:mt-8 sm:text-xl sm:leading-8"
         >
           Business inquiries, collaborations, community connections, and
           story-driven projects.
         </motion.p>
 
-        <div className="mt-14 space-y-8">
+        <div className="mt-10 space-y-8 sm:mt-14">
           <motion.div
             variants={riseIn}
             whileHover={cardLift}
-            className="border border-charcoal-800 bg-charcoal-900/40 p-8 shadow-none sm:p-10"
+            className="border border-charcoal-800 bg-charcoal-900/40 p-6 shadow-none sm:p-10"
           >
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-burgundy-700">
               Message
             </p>
 
             <h2
-              className={`${spaceGrotesk.className} mt-4 text-[1.9rem] font-semibold leading-tight tracking-normal text-white`}
+              className={`${spaceGrotesk.className} mt-4 text-[1.7rem] font-semibold leading-tight tracking-normal text-white sm:text-[1.9rem]`}
             >
               Send a message
             </h2>
@@ -242,7 +242,7 @@ export default function ContactPage() {
               <button
                 type="submit"
                 disabled={status === "loading"}
-                className="bg-white px-6 py-3 text-sm font-medium tracking-normal text-charcoal-900 transition duration-200 hover:-translate-y-0.5 hover:bg-burgundy-700 hover:text-white disabled:cursor-not-allowed disabled:opacity-70"
+                className="w-full bg-white px-6 py-3 text-center text-sm font-medium tracking-normal text-charcoal-900 transition duration-200 hover:-translate-y-0.5 hover:bg-burgundy-700 hover:text-white disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
               >
                 {status === "loading" ? "Sending..." : "Send Message"}
               </button>
@@ -262,14 +262,14 @@ export default function ContactPage() {
           <motion.div
             variants={riseIn}
             whileHover={cardLift}
-            className="border border-charcoal-800 bg-charcoal-900/40 p-8 shadow-none sm:p-10"
+            className="border border-charcoal-800 bg-charcoal-900/40 p-6 shadow-none sm:p-10"
           >
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-burgundy-700">
               Socials
             </p>
 
             <h2
-              className={`${spaceGrotesk.className} mt-4 text-[1.9rem] font-semibold leading-tight tracking-normal text-white`}
+              className={`${spaceGrotesk.className} mt-4 text-[1.7rem] font-semibold leading-tight tracking-normal text-white sm:text-[1.9rem]`}
             >
               Find the platforms
             </h2>
@@ -317,13 +317,13 @@ export default function ContactPage() {
                               {platform.accounts.map((account) => (
                                 <div
                                   key={`${platform.key}-${account.name}`}
-                                  className="flex items-start justify-between gap-3 border-b border-charcoal-800 pb-3 last:border-b-0 last:pb-0"
+                                  className="flex flex-col gap-1 border-b border-charcoal-800 pb-3 last:border-b-0 last:pb-0 sm:flex-row sm:items-start sm:justify-between sm:gap-3"
                                 >
                                   <span className="font-medium text-white">
                                     {account.name}
                                   </span>
 
-                                  <span className="text-right text-burgundy-700">
+                                  <span className="text-burgundy-700 sm:text-right">
                                     {account.handle}
                                   </span>
                                 </div>

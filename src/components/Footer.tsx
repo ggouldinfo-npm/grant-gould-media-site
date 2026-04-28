@@ -23,25 +23,25 @@ export default function Footer() {
       style={{ backgroundColor: "#ffffff" }}
     >
       <div
-        className="mx-auto max-w-6xl px-6 py-12"
+        className="mx-auto max-w-6xl px-5 py-10 sm:px-6 sm:py-12"
         style={{ backgroundColor: "#ffffff" }}
       >
         <div className="grid gap-10 md:grid-cols-[1.2fr_0.8fr_0.8fr]">
           <div>
             <Link
               href="/"
-              className="-ml-[16px] inline-flex items-center gap-3 text-charcoal-900 transition hover:text-burgundy-700"
+              className="-ml-[10px] inline-flex items-center gap-2.5 text-charcoal-900 transition hover:text-burgundy-700 sm:-ml-[16px] sm:gap-3"
             >
               <Image
                 src="/branding/logo-mark.png"
                 alt="Grant Gould Media logo"
                 width={44}
                 height={44}
-                className="h-11 w-11 object-contain"
+                className="h-10 w-10 object-contain sm:h-11 sm:w-11"
               />
 
               <span
-                className={`${tektur.className} text-[1.02rem] font-semibold tracking-[0.045em]`}
+                className={`${tektur.className} text-[0.92rem] font-semibold tracking-[0.035em] sm:text-[1.02rem] sm:tracking-[0.045em]`}
               >
                 Grant Gould Media
               </span>
@@ -83,12 +83,12 @@ export default function Footer() {
             <div className="mt-5 space-y-3 text-sm text-charcoal-700">
               <p>
                 For business inquiries, collaborations, community projects, and
-                story-driven media work, use the email below.
+                story-driven media work.
               </p>
 
               <a
                 href="mailto:contact@grantgouldmedia.com"
-                className="block text-charcoal-900 transition hover:text-burgundy-700"
+                className="block break-words text-charcoal-900 transition hover:text-burgundy-700"
               >
                 contact@grantgouldmedia.com
               </a>

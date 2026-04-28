@@ -36,30 +36,30 @@ export default function Navbar() {
       style={{ backgroundColor: "#ffffff" }}
     >
       <div
-        className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4"
+        className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3.5 sm:px-6 sm:py-4"
         style={{ backgroundColor: "#ffffff" }}
       >
         <Link
           href="/"
-          className="-ml-[16px] inline-flex items-center gap-3 text-charcoal-900 transition hover:text-burgundy-700"
+          className="-ml-[10px] inline-flex min-w-0 items-center gap-2.5 text-charcoal-900 transition hover:text-burgundy-700 sm:-ml-[16px] sm:gap-3"
         >
           <Image
             src="/branding/logo-mark.png"
             alt="Grant Gould Media logo"
             width={44}
             height={44}
-            className="h-11 w-11 object-contain"
+            className="h-10 w-10 shrink-0 object-contain sm:h-11 sm:w-11"
             priority
           />
 
           <span
-            className={`${tektur.className} text-[1.02rem] font-semibold tracking-[0.045em]`}
+            className={`${tektur.className} truncate text-[0.92rem] font-semibold tracking-[0.035em] sm:text-[1.02rem] sm:tracking-[0.045em]`}
           >
             Grant Gould Media
           </span>
         </Link>
 
-        <div className="relative flex items-center">
+        <div className="relative flex shrink-0 items-center">
           <button
             type="button"
             aria-label="Open navigation"
@@ -103,7 +103,7 @@ export default function Navbar() {
                 initial="hidden"
                 animate="show"
                 exit="exit"
-                className="absolute right-0 top-12 w-[270px] overflow-hidden rounded-none border border-charcoal-900/10 p-3 shadow-none"
+                className="absolute right-0 top-12 w-[calc(100vw-2.5rem)] max-w-[300px] overflow-hidden rounded-none border border-charcoal-900/10 p-3 shadow-none sm:w-[270px]"
                 style={{ backgroundColor: "#ffffff" }}
               >
                 <div className="flex flex-col">

@@ -18,7 +18,7 @@ const spaceGrotesk = Space_Grotesk({
 export default function GrantYouAStoryPage() {
   return (
     <div className={`${manrope.className} bg-charcoal-900 text-white`}>
-      <section className="relative min-h-[78vh] overflow-hidden">
+      <section className="relative min-h-[72vh] overflow-hidden sm:min-h-[78vh]">
         <video
           className="absolute inset-0 h-full w-full object-cover"
           src="/videos/grantyouastory-video.mp4"
@@ -37,7 +37,7 @@ export default function GrantYouAStoryPage() {
           variants={pageStagger}
           initial="hidden"
           animate="show"
-          className="relative z-10 mx-auto flex min-h-[78vh] max-w-6xl items-center px-6 py-24"
+          className="relative z-10 mx-auto flex min-h-[72vh] max-w-6xl items-center px-5 py-20 sm:min-h-[78vh] sm:px-6 sm:py-24"
         >
           <div className="max-w-4xl">
             <motion.p
@@ -49,30 +49,33 @@ export default function GrantYouAStoryPage() {
 
             <motion.h1
               variants={riseIn}
-              className={`${spaceGrotesk.className} mt-4 max-w-5xl text-5xl font-semibold leading-[1.12] tracking-normal text-white sm:text-7xl`}
+              className={`${spaceGrotesk.className} mt-4 max-w-5xl text-4xl font-semibold leading-[1.08] tracking-normal text-white sm:text-7xl sm:leading-[1.12]`}
             >
               Behind the scenes, real adventures, and stories worth watching
             </motion.h1>
 
             <motion.p
               variants={riseIn}
-              className="mt-8 max-w-2xl text-lg leading-8 tracking-normal text-white/85 sm:text-xl"
+              className="mt-6 max-w-2xl text-base leading-7 tracking-normal text-white/85 sm:mt-8 sm:text-xl sm:leading-8"
             >
               A more personal lens into the process, the places, and the moments
               that happen while building things that matter.
             </motion.p>
 
-            <motion.div variants={riseIn} className="mt-10 flex flex-wrap gap-4">
+            <motion.div
+              variants={riseIn}
+              className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4"
+            >
               <Link
                 href="/contact"
-                className="bg-white px-6 py-3 text-sm font-medium tracking-normal text-charcoal-900 transition duration-200 hover:-translate-y-0.5 hover:bg-burgundy-700 hover:text-white"
+                className="w-full bg-white px-6 py-3 text-center text-sm font-medium tracking-normal text-charcoal-900 transition duration-200 hover:-translate-y-0.5 hover:bg-burgundy-700 hover:text-white sm:w-auto"
               >
                 Contact
               </Link>
 
               <Link
                 href="/services"
-                className="border border-white/35 px-6 py-3 text-sm font-medium tracking-normal text-white transition duration-200 hover:-translate-y-0.5 hover:border-burgundy-700 hover:text-burgundy-700"
+                className="w-full border border-white/35 px-6 py-3 text-center text-sm font-medium tracking-normal text-white transition duration-200 hover:-translate-y-0.5 hover:border-burgundy-700 hover:text-burgundy-700 sm:w-auto"
               >
                 View Services
               </Link>
@@ -86,20 +89,20 @@ export default function GrantYouAStoryPage() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="mx-auto max-w-6xl px-6 pt-14 pb-28"
+        className="mx-auto max-w-6xl px-5 pt-12 pb-20 sm:px-6 sm:pt-14 sm:pb-28"
       >
         <motion.div
           variants={riseIn}
-          className="max-w-4xl space-y-6 text-lg leading-8 tracking-normal text-white/78"
+          className="max-w-4xl space-y-5 text-base leading-7 tracking-normal text-white/78 sm:space-y-6 sm:text-lg sm:leading-8"
         >
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-burgundy-700">
-            The Work
+            The Story
           </p>
 
           <h2
-            className={`${spaceGrotesk.className} max-w-3xl text-4xl font-semibold leading-tight tracking-normal text-white`}
+            className={`${spaceGrotesk.className} max-w-3xl text-3xl font-semibold leading-tight tracking-normal text-white sm:text-4xl`}
           >
-            The personal side of what I do
+            The personal side of the work
           </h2>
 
           <p>Grant You a Story is the personal side of the work.</p>
@@ -116,10 +119,13 @@ export default function GrantYouAStoryPage() {
           </p>
         </motion.div>
 
-        <motion.div variants={riseIn} className="mt-14 grid gap-6 md:grid-cols-3">
+        <motion.div
+          variants={riseIn}
+          className="mt-12 grid gap-6 sm:mt-14 md:grid-cols-3"
+        >
           <motion.div
             whileHover={cardLift}
-            className="border border-charcoal-800 bg-charcoal-900/40 p-8 shadow-none"
+            className="border border-charcoal-800 bg-charcoal-900/40 p-6 shadow-none sm:p-8"
           >
             <h3
               className={`${spaceGrotesk.className} text-2xl font-semibold tracking-normal text-white`}
@@ -135,7 +141,7 @@ export default function GrantYouAStoryPage() {
 
           <motion.div
             whileHover={cardLift}
-            className="border border-charcoal-800 bg-charcoal-900/40 p-8 shadow-none"
+            className="border border-charcoal-800 bg-charcoal-900/40 p-6 shadow-none sm:p-8"
           >
             <h3
               className={`${spaceGrotesk.className} text-2xl font-semibold tracking-normal text-white`}
@@ -150,7 +156,7 @@ export default function GrantYouAStoryPage() {
 
           <motion.div
             whileHover={cardLift}
-            className="border border-charcoal-800 bg-charcoal-900/40 p-8 shadow-none"
+            className="border border-charcoal-800 bg-charcoal-900/40 p-6 shadow-none sm:p-8"
           >
             <h3
               className={`${spaceGrotesk.className} text-2xl font-semibold tracking-normal text-white`}

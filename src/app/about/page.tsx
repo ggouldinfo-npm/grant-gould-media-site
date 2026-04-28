@@ -21,7 +21,7 @@ export default function AboutPage() {
         variants={pageStagger}
         initial="hidden"
         animate="show"
-        className="mx-auto max-w-6xl px-6 py-24 pb-28"
+        className="mx-auto max-w-6xl px-5 py-16 pb-20 sm:px-6 sm:py-24 sm:pb-28"
       >
         <motion.p
           variants={riseIn}
@@ -32,15 +32,15 @@ export default function AboutPage() {
 
         <motion.h1
           variants={riseIn}
-          className={`${spaceGrotesk.className} mt-4 max-w-4xl text-5xl font-semibold leading-[1.12] tracking-normal text-white sm:text-7xl`}
+          className={`${spaceGrotesk.className} mt-4 max-w-4xl text-4xl font-semibold leading-[1.08] tracking-normal text-white sm:text-7xl sm:leading-[1.12]`}
         >
           Storytelling rooted in purpose, place, and impact
         </motion.h1>
 
-        <div className="mt-12 grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
+        <div className="mt-10 grid gap-8 sm:mt-12 lg:grid-cols-[1.2fr_0.8fr]">
           <motion.div
             variants={riseIn}
-            className="space-y-6 text-lg leading-8 tracking-normal text-white/78"
+            className="space-y-5 text-base leading-7 tracking-normal text-white/78 sm:space-y-6 sm:text-lg sm:leading-8"
           >
             <p>
               Hi, I am Grant Gould, a storyteller and creator from Granville,
@@ -62,7 +62,7 @@ export default function AboutPage() {
             </p>
 
             <p>
-              Grant You a Story is the more personal side of the work—behind
+              Grant You a Story is the more personal side of the work — behind
               the scenes, real adventures, and the moments in between.
             </p>
 
@@ -75,14 +75,14 @@ export default function AboutPage() {
           <motion.div
             variants={riseIn}
             whileHover={cardLift}
-            className="border border-charcoal-800 bg-charcoal-900/40 p-8 shadow-none"
+            className="border border-charcoal-800 bg-charcoal-900/40 p-6 shadow-none sm:p-8"
           >
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-burgundy-700">
               Focus
             </p>
 
             <h2
-              className={`${spaceGrotesk.className} mt-4 text-[1.8rem] font-semibold leading-tight tracking-normal text-white`}
+              className={`${spaceGrotesk.className} mt-4 text-[1.7rem] font-semibold leading-tight tracking-normal text-white sm:text-[1.8rem]`}
             >
               Three platforms
             </h2>
@@ -128,17 +128,18 @@ export default function AboutPage() {
 
         <motion.div
           variants={riseIn}
-          className="mt-24 grid gap-6 md:grid-cols-3"
+          className="mt-16 grid gap-6 sm:mt-24 md:grid-cols-3"
         >
           <motion.div
             whileHover={cardLift}
-            className="border border-charcoal-800 bg-charcoal-900/40 p-8 shadow-none"
+            className="border border-charcoal-800 bg-charcoal-900/40 p-6 shadow-none sm:p-8"
           >
             <h3
               className={`${spaceGrotesk.className} text-2xl font-semibold tracking-normal text-white`}
             >
               Purpose
             </h3>
+
             <p className="mt-4 leading-7 tracking-normal text-white/72">
               Creating work that has meaning beyond the final post, video, or
               project.
@@ -147,13 +148,14 @@ export default function AboutPage() {
 
           <motion.div
             whileHover={cardLift}
-            className="border border-charcoal-800 bg-charcoal-900/40 p-8 shadow-none"
+            className="border border-charcoal-800 bg-charcoal-900/40 p-6 shadow-none sm:p-8"
           >
             <h3
               className={`${spaceGrotesk.className} text-2xl font-semibold tracking-normal text-white`}
             >
               Quality
             </h3>
+
             <p className="mt-4 leading-7 tracking-normal text-white/72">
               Building visuals, stories, and digital experiences with intention
               and care.
@@ -162,13 +164,14 @@ export default function AboutPage() {
 
           <motion.div
             whileHover={cardLift}
-            className="border border-charcoal-800 bg-charcoal-900/40 p-8 shadow-none"
+            className="border border-charcoal-800 bg-charcoal-900/40 p-6 shadow-none sm:p-8"
           >
             <h3
               className={`${spaceGrotesk.className} text-2xl font-semibold tracking-normal text-white`}
             >
               Perspective
             </h3>
+
             <p className="mt-4 leading-7 tracking-normal text-white/72">
               Looking closely at people, places, and stories that deserve to be
               seen clearly.

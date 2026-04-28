@@ -231,7 +231,7 @@ export default function ContactPage() {
           </h2>
 
           <div className="mt-4 space-y-3 text-cream-25/78">
-            <p>Email: grant@grantgouldmedia.com</p>
+            <p>Email: contact@grantgouldmedia.com</p>
             <p>Choose a platform below to view each account.</p>
           </div>
 

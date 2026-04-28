@@ -4,9 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Orbitron } from "next/font/google";
+import { Chakra_Petch } from "next/font/google";
 
-const orbitron = Orbitron({
+const chakraPetch = Chakra_Petch({
   subsets: ["latin"],
   weight: ["500", "600"],
 });
@@ -43,8 +43,9 @@ export default function Navbar() {
             className="h-11 w-11 object-contain"
             priority
           />
+
           <span
-            className={`${orbitron.className} text-[0.98rem] font-medium uppercase tracking-[0.08em] sm:text-[1.02rem]`}
+            className={`${chakraPetch.className} text-[1.05rem] font-semibold tracking-[0.015em] sm:text-[1.12rem]`}
           >
             Grant Gould Media
           </span>

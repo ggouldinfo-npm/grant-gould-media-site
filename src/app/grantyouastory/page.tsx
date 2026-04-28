@@ -96,13 +96,13 @@ export default function GrantYouAStoryPage() {
           className="max-w-4xl space-y-5 text-base leading-7 tracking-normal text-white/78 sm:space-y-6 sm:text-lg sm:leading-8"
         >
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-burgundy-700">
-            The Story
+            The Work
           </p>
 
           <h2
             className={`${spaceGrotesk.className} max-w-3xl text-3xl font-semibold leading-tight tracking-normal text-white sm:text-4xl`}
           >
-            The personal side of the work
+            The personal side of what I do
           </h2>
 
           <p>Grant You a Story is the personal side of the work.</p>

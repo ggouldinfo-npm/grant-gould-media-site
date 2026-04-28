@@ -62,7 +62,7 @@ export default function AboutPage() {
             </p>
 
             <p>
-              Grant You a Story is the more personal side of the work — behind
+              Grant You a Story is the more personal side of the work—behind
               the scenes, real adventures, and the moments in between.
             </p>
 

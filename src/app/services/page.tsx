@@ -211,7 +211,7 @@ export default function ServicesPage() {
               </h3>
 
               <p className="mt-4 leading-7 tracking-normal text-white/72">
-                Granville, Glens Falls, Saratoga, and surrounding communities.
+                Granville, Glens Falls, Saratoga Springs, and surrounding communities.
               </p>
             </motion.div>
 

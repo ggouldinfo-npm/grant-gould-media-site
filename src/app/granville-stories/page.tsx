@@ -124,7 +124,7 @@ export default function GranvilleStoriesPage() {
 
             <p>
               The goal is to build a visual archive that reflects the people,
-              identity, and character of the community — something that can be
+              identity, and character of the community—something that can be
               shared now and preserved for future generations.
             </p>
           </div>

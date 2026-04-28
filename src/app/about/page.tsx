@@ -1,95 +1,181 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { pageStagger, riseIn, cardLift } from "@/lib/motion";
+import { Manrope, Space_Grotesk } from "next/font/google";
+import { cardLift, pageStagger, riseIn } from "@/lib/motion";
+
+const manrope = Manrope({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+});
 
 export default function AboutPage() {
   return (
-    <motion.section
-      variants={pageStagger}
-      initial="hidden"
-      animate="show"
-      className="mx-auto max-w-6xl px-6 py-24"
-    >
-      <motion.p variants={riseIn} className="page-kicker">
-        About
-      </motion.p>
+    <div className={`${manrope.className} bg-charcoal-900 text-white`}>
+      <motion.section
+        variants={pageStagger}
+        initial="hidden"
+        animate="show"
+        className="mx-auto max-w-6xl px-6 py-24 pb-28"
+      >
+        <motion.p
+          variants={riseIn}
+          className="text-xs font-semibold uppercase tracking-[0.28em] text-burgundy-700"
+        >
+          About
+        </motion.p>
 
-      <motion.h1 variants={riseIn} className="page-heading max-w-3xl">
-        Storytelling rooted in purpose, place, and impact
-      </motion.h1>
+        <motion.h1
+          variants={riseIn}
+          className={`${spaceGrotesk.className} mt-4 max-w-4xl text-5xl font-semibold leading-[1.12] tracking-normal text-white sm:text-7xl`}
+        >
+          Storytelling rooted in purpose, place, and impact
+        </motion.h1>
 
-      <div className="mt-12 grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
+        <div className="mt-12 grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
+          <motion.div
+            variants={riseIn}
+            className="space-y-6 text-lg leading-8 tracking-normal text-white/78"
+          >
+            <p>
+              Hi, I am Grant Gould, a storyteller and creator from Granville,
+              New York. My work is based on visual storytelling that supports
+              communities, businesses, and real stories.
+            </p>
+
+            <p>
+              Grant Gould Media serves as the main hub for my client and
+              business-facing work, while also housing Granville Stories and
+              Grant You a Story.
+            </p>
+
+            <p>
+              Inspired by my passion for storytelling and conversations with my
+              grandmother, Granville Stories is an initiative focused on
+              documenting and preserving the voices, stories, and history of the
+              community that shaped me.
+            </p>
+
+            <p>
+              Grant You a Story is the more personal side of the work—behind
+              the scenes, real adventures, and the moments in between.
+            </p>
+
+            <p>
+              Everything I create is rooted in purpose, quality, and
+              perspective.
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={riseIn}
+            whileHover={cardLift}
+            className="border border-charcoal-800 bg-charcoal-900/40 p-8 shadow-none"
+          >
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-burgundy-700">
+              Focus
+            </p>
+
+            <h2
+              className={`${spaceGrotesk.className} mt-4 text-[1.8rem] font-semibold leading-tight tracking-normal text-white`}
+            >
+              Three platforms
+            </h2>
+
+            <div className="mt-6 space-y-5 text-white/78">
+              <div>
+                <h3
+                  className={`${spaceGrotesk.className} font-semibold tracking-normal text-white`}
+                >
+                  Grant Gould Media
+                </h3>
+                <p className="mt-1 leading-7">
+                  Client-facing storytelling, creative direction, and business
+                  content.
+                </p>
+              </div>
+
+              <div>
+                <h3
+                  className={`${spaceGrotesk.className} font-semibold tracking-normal text-white`}
+                >
+                  Granville Stories
+                </h3>
+                <p className="mt-1 leading-7">
+                  Preserving the voices, stories, and history of Granville.
+                </p>
+              </div>
+
+              <div>
+                <h3
+                  className={`${spaceGrotesk.className} font-semibold tracking-normal text-white`}
+                >
+                  Grant You a Story
+                </h3>
+                <p className="mt-1 leading-7">
+                  Behind the scenes, personal storytelling, and the moments in
+                  between.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
         <motion.div
           variants={riseIn}
-          className="space-y-6 text-lg leading-8 text-cream-25/78"
+          className="mt-24 grid gap-6 md:grid-cols-3"
         >
-          <p>
-            Hi, I am Grant Gould, a storyteller and creator from Granville, New
-            York. My work is based on visual storytelling that supports
-            communities, businesses, and real stories.
-          </p>
+          <motion.div
+            whileHover={cardLift}
+            className="border border-charcoal-800 bg-charcoal-900/40 p-8 shadow-none"
+          >
+            <h3
+              className={`${spaceGrotesk.className} text-2xl font-semibold tracking-normal text-white`}
+            >
+              Purpose
+            </h3>
+            <p className="mt-4 leading-7 tracking-normal text-white/72">
+              Creating work that has meaning beyond the final post, video, or
+              project.
+            </p>
+          </motion.div>
 
-          <p>
-            Grant Gould Media serves as the main hub for my client and
-            business-facing work, while also housing Granville Stories and Grant
-            You a Story.
-          </p>
+          <motion.div
+            whileHover={cardLift}
+            className="border border-charcoal-800 bg-charcoal-900/40 p-8 shadow-none"
+          >
+            <h3
+              className={`${spaceGrotesk.className} text-2xl font-semibold tracking-normal text-white`}
+            >
+              Quality
+            </h3>
+            <p className="mt-4 leading-7 tracking-normal text-white/72">
+              Building visuals, stories, and digital experiences with intention
+              and care.
+            </p>
+          </motion.div>
 
-          <p>
-            Inspired by my passion for storytelling and conversations with my
-            grandmother, Granville Stories is an initiative focused on
-            documenting and preserving the voices, stories, and history of the
-            community that shaped me.
-          </p>
-
-          <p>
-            Grant You a Story is the more personal side of the work—behind the
-            scenes, real adventures, and the moments in between.
-          </p>
-
-          <p>
-            Everything I create is rooted in purpose, quality, and perspective.
-          </p>
+          <motion.div
+            whileHover={cardLift}
+            className="border border-charcoal-800 bg-charcoal-900/40 p-8 shadow-none"
+          >
+            <h3
+              className={`${spaceGrotesk.className} text-2xl font-semibold tracking-normal text-white`}
+            >
+              Perspective
+            </h3>
+            <p className="mt-4 leading-7 tracking-normal text-white/72">
+              Looking closely at people, places, and stories that deserve to be
+              seen clearly.
+            </p>
+          </motion.div>
         </motion.div>
-
-        <motion.div
-          variants={riseIn}
-          whileHover={cardLift}
-          className="surface-card soft-shadow p-8"
-        >
-          <p className="page-kicker">Focus</p>
-
-          <h2 className="font-display mt-4 text-[1.8rem] font-medium tracking-[-0.02em] text-cream-25">
-            Three platforms
-          </h2>
-
-          <div className="mt-6 space-y-5 text-cream-25/78">
-            <div>
-              <h3 className="font-medium text-cream-25">Grant Gould Media</h3>
-              <p className="mt-1 leading-7">
-                Client-facing storytelling, creative direction, and business
-                content.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-medium text-cream-25">Granville Stories</h3>
-              <p className="mt-1 leading-7">
-                Preserving the voices, stories, and history of Granville.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-medium text-cream-25">Grant You a Story</h3>
-              <p className="mt-1 leading-7">
-                Behind the scenes, personal storytelling, and the moments in
-                between.
-              </p>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </motion.section>
+      </motion.section>
+    </div>
   );
 }

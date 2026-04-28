@@ -17,7 +17,7 @@ export const projects: Project[] = [
   },
   {
     title: "Granville Stories",
-    category: "Community / Storytelling",
+    category: "Community",
     description:
       "A long-term storytelling initiative focused on preserving the voices, stories, and history of Granville through interviews and visual storytelling.",
     href: "/granville-stories",

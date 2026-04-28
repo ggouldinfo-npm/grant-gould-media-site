@@ -47,6 +47,7 @@ export async function POST(request: Request) {
     const { error } = await resend.emails.send({
       from,
       to,
+      replyTo: email,
       subject: subject || `New contact form message from ${name}`,
       text: `New contact form message
 
@@ -56,9 +57,6 @@ Subject: ${subject || "(No subject)"}
 
 Message:
 ${message}`,
-      headers: {
-        "Reply-To": email,
-      },
     });
 
     if (error) {

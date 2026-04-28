@@ -12,6 +12,7 @@ export async function POST(request: Request) {
     const message = body.message?.toString().trim() || "";
     const company = body.company?.toString().trim() || "";
 
+    // Honeypot field for spam bots
     if (company) {
       return Response.json({ ok: true });
     }
@@ -24,6 +25,7 @@ export async function POST(request: Request) {
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
     if (!emailRegex.test(email)) {
       return Response.json(
         { ok: false, error: "Please enter a valid email address." },
@@ -31,36 +33,31 @@ export async function POST(request: Request) {
       );
     }
 
-    const to = process.env.CONTACT_TO_EMAIL;
+    const to = "grant@grantgouldmedia.com";
     const from = process.env.CONTACT_FROM_EMAIL;
     const apiKey = process.env.RESEND_API_KEY;
 
-    console.log("CONTACT_TO_EMAIL:", to);
-    console.log("CONTACT_FROM_EMAIL:", from);
-    console.log("RESEND_API_KEY exists:", !!apiKey);
-
-    if (!to || !from || !apiKey) {
+    if (!from || !apiKey) {
       return Response.json(
         { ok: false, error: "Server email settings are missing." },
         { status: 500 }
       );
     }
 
-    const { data, error } = await resend.emails.send({
+    const { error } = await resend.emails.send({
       from,
       to,
       replyTo: email,
       subject: subject || `New contact form message from ${name}`,
-      text: `Name: ${name}
+      text: `New contact form message
+
+Name: ${name}
 Email: ${email}
 Subject: ${subject || "(No subject)"}
 
 Message:
 ${message}`,
     });
-
-    console.log("Resend data:", data);
-    console.log("Resend error:", error);
 
     if (error) {
       return Response.json(
